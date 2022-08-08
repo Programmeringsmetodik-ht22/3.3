@@ -1,7 +1,7 @@
 /*******************************************************************************
- * 3.4.c: Programkod skriven i C89. Ett dynamiskt fält tilldelas 20 osignerade
- *        heltal mellan 5 - 15, vilket skrivs till en fil. Innan programmet
- *        avslutas läses filens innehåll in och skrivs ut i terminalen.
+* 3.4.c: Programkod skriven i C89. Ett dynamiskt fält tilldelas 20 osignerade
+*        heltal mellan 5 - 15, vilket skrivs till en fil. Innan programmet
+*        avslutas läses filens innehåll in och skrivs ut i terminalen.
 *******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,18 +10,18 @@
 #define SIZE 20 /* Storlek på dynamisk array för lagring av osignerade heltal. */
 
 /*******************************************************************************
- * UINT_PTR_NEW: Returnerar dynamiskt allokerat fält med angiven storlek för
- *               lagring av osignerade heltal av datatypen size_t.
+* UINT_PTR_NEW: Returnerar dynamiskt allokerat fält med angiven storlek för
+*               lagring av osignerade heltal av datatypen size_t.
 *******************************************************************************/
 #define UINT_PTR_NEW(SIZE) (size_t*)malloc(sizeof(size_t) * SIZE);
 
 /*******************************************************************************
- * GET_RANDOM: Returnerar ett heltal mellan angiven min och max.
+* GET_RANDOM: Returnerar ett heltal mellan angiven min och max.
 *******************************************************************************/
 #define GET_RANDOM(MIN, MAX) rand() % (MAX + 1 - MIN) + MIN
 
 /*******************************************************************************
- * assign: Fyller array med randomiserade heltal mellan angivet min och max.
+* assign: Fyller array med randomiserade heltal mellan angivet min och max.
 *******************************************************************************/
 static void assign(size_t* data, const size_t size, const size_t min, const size_t max)
 {
@@ -32,8 +32,8 @@ static void assign(size_t* data, const size_t size, const size_t min, const size
 }
 
 /*******************************************************************************
- * print: Skriver ut innehåll lagrat i en array via angiven utström. Som
- *        default används standardutenheten för utskrift i terminalen.
+* print: Skriver ut innehåll lagrat i en array via angiven utström. Som
+*        default används standardutenheten för utskrift i terminalen.
 *******************************************************************************/
 static void print(const size_t* data, const size_t size, FILE* ostream)
 {
@@ -50,8 +50,8 @@ static void print(const size_t* data, const size_t size, FILE* ostream)
 }
 
 /*******************************************************************************
- * file_read: Läser innehåll från angiven filsökväg och skriver ut via angiven
- *            utström, där utskrift i terminalen används som default.
+* file_read: Läser innehåll från angiven filsökväg och skriver ut via angiven
+*            utström, där utskrift i terminalen används som default.
 *******************************************************************************/
 static void file_read(const char* filepath, FILE* ostream)
 {
@@ -73,9 +73,9 @@ static void file_read(const char* filepath, FILE* ostream)
 }
 
 /*******************************************************************************
- * main: Fyller dynamiskt allokerat fält med 20 osignerade heltal mellan 5 - 15.
- *       Arrayens innehåll skrivs till filen data.txt, vars innehåll sedan
- *       läses in och skrivs ut i terminalen.
+* main: Fyller dynamiskt allokerat fält med 20 osignerade heltal mellan 5 - 15.
+*       Arrayens innehåll skrivs till filen data.txt, vars innehåll sedan
+*       läses in och skrivs ut i terminalen.
 *******************************************************************************/
 int main(void)
 {
